@@ -50,10 +50,10 @@ class App extends Component {
       <Router>
         <div className="App">
             <div>
-              {this.state.isLoggedIn && localStorage.getItem("isLoggedIn") === "true" ? <Redirect to="/rutina" /> : <Redirect to="/" />}
+              {this.state.isLoggedIn && localStorage.getItem("isLoggedIn") === "true" ? <Redirect to="/inicio" /> : <Redirect to="/login" />}
               <Switch>
-                <Route exact path="/" component={LoginView} />
-                <Route exact path="/rutina" component={NavigationDrawerView} />
+                <Route exact path="/login" component={LoginView} />
+                <Route exact path="/inicio" component={NavigationDrawerView} />
               </Switch>
             </div>
         </div>
